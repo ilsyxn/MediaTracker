@@ -1,0 +1,26 @@
+[tasks.fe]
+description = "Start the Next.js frontend dev server"
+dir = "frontend"
+run = "npm run dev"
+
+[tasks.be]
+description = "Start database and backend via Docker Compose"
+run = "docker compose up"
+
+[tasks."be:build"]
+description = "Rebuild and start database and backend via Docker Compose"
+run = "docker compose up --build"
+
+[tasks."be:down"]
+description = "Stop database and backend containers"
+run = "docker compose down"
+
+[tasks."prettier:fix"]
+description = "Format all frontend files with Prettier"
+dir = "frontend"
+run = "npx prettier --write \"src/**/*.{ts,tsx,css,json}\""
+
+[tasks."prettier:check"]
+description = "Check frontend formatting with Prettier"
+dir = "frontend"
+run = "npx prettier --check \"src/**/*.{ts,tsx,css,json}\""
