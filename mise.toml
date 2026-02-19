@@ -3,16 +3,16 @@ description = "Start the Next.js frontend dev server"
 dir = "frontend"
 run = "npm run dev"
 
-[tasks.be]
-description = "Start database and backend via Docker Compose"
+[tasks.app]
+description = "Start the app (database + backend) via Docker Compose"
 run = "docker compose up"
 
-[tasks."be:build"]
-description = "Rebuild and start database and backend via Docker Compose"
+[tasks."app:build"]
+description = "Rebuild and start the app (database + backend) via Docker Compose"
 run = "docker compose up --build"
 
-[tasks."be:down"]
-description = "Stop database and backend containers"
+[tasks."app:down"]
+description = "Stop app containers (database + backend)"
 run = "docker compose down"
 
 [tasks."prettier:fix"]
